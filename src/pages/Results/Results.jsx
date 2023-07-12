@@ -1,5 +1,9 @@
 import React from 'react'
 
 export default function Results() {
-    return <h2>Results</h2>
+    return (
+        <div>
+            <h1>Résultats</h1>
+        </div>
+    )
 }
