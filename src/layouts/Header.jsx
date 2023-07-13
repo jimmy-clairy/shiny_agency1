@@ -1,14 +1,32 @@
 import { Link } from 'react-router-dom'
+import Logo from '../assets/dark-logo.png'
+import styled from 'styled-components'
+import { StyledLink } from '../utils/style/Atoms'
+
+const HeaderStyle = styled.header`
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
+
+const HomeLogo = styled.img`
+    height: 7rem;
+`
 
 export default function Header() {
     return (
-        <header>
-            <h1>Logo</h1>
+        <HeaderStyle>
+            <Link to={'/'}>
+                <HomeLogo src={Logo} alt="logo" />
+            </Link>
             <nav>
-                <Link to={'/'}>Accueil</Link>
-                <Link to={'/survey/1'}>Survey</Link>
-                <Link to={'/freelances'}>Freelances</Link>
+                <StyledLink to={'/'}>Accueil</StyledLink>
+                <StyledLink to={'/freelances'}>Profils</StyledLink>
+                <StyledLink to={'/survey/1'} $isFullLink>
+                    Faire le test
+                </StyledLink>
             </nav>
-        </header>
+        </HeaderStyle>
     )
 }
