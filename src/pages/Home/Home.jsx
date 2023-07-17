@@ -1,7 +1,7 @@
 import homeIllustration from '../../assets/home-illustration.svg'
 import { styled } from 'styled-components'
 import { StyledLink } from '../../utils/style/Atoms'
-import { colors } from '../../utils/style/colors'
+import colors from '../../utils/style/colors'
 
 const HomerContainer = styled.div`
     margin: 3rem;
