@@ -54,7 +54,7 @@ export default function Freelances() {
         async function dataFetch() {
             setIsDataLoding(true)
             try {
-                const response = await fetch(`http://localhost:8000/feelances`)
+                const response = await fetch(`http://localhost:8000/freelances`)
                 const { freelancersList } = await response.json()
                 setFreelanceProfiles(freelancersList)
                 setError(false)
